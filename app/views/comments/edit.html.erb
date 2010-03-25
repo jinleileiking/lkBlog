@@ -1,0 +1,32 @@
+<div class='post'>
+    <div class='body'>
+        <h1><%= h(@article.title)%></h1>
+        <p><%=h @article.body %> </p>
+        <div class="little">
+            <%=h @article.user.login %> 写于 <%=h @article.date.strftime("%Y年%m月%d日 %H:%M:%S") %><br/>
+
+            <!-- show all comments of this article -->
+            <h3>评论:</h3>
+            <% @comments.each do |comment| %>
+                <% if comment == @comment %>
+                    <span class="edit"><%=h comment.body %></span>
+                <%  else %>
+                    <%=h comment.body %>
+                <% end %><br/>
+                <%=h comment.user.login %> 写于 <%=h comment.updated_at.strftime("%Y年%m月%d日 %H:%M:%S") %><br/>
+                <br/><br/>
+            <% end %>
+
+        </div>
+        <% form_for([@article, @comment]) do |f| %>
+            <%= f.error_messages %>
+            <p>
+                <%= f.label "评论内容" %><br />
+                <%= f.text_area :body %>
+            </p>
+            <p>
+                <%= f.submit '提交' %>
+            </p>
+        <% end %>
+    </div>
+</div>

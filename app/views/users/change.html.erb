@@ -1,0 +1,8 @@
+ <h1>修改权限</h1>
+ <% form_for(@user, :url => confirm_user_path(@user)) do |f| %>
+        <%= f.error_messages %>
+        <br/>
+        <%= f.label  "作者:" %>
+        <%= f.check_box(:isAdmin)%><br />
+        <%= f.submit "提交" %>
+    <% end %>

@@ -1,0 +1,15 @@
+<h1>注册</h1>
+
+<% form_for(@user) do |f| %>
+    <%= f.error_messages %>
+    <%= f.label "用户名"%><br />
+    <%= f.text_field :login %><br />
+    <br/>
+    <%= f.label  "新密码" %><br />
+    <%= f.password_field :password %><br />
+    <br />
+    <%= f.label "密码确认" %><br />
+    <%= f.password_field :password_confirmation %><br />
+
+    <%= f.submit "注册" %>
+<% end %>

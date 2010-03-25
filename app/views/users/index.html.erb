@@ -1,0 +1,17 @@
+<h1>管理用户</h1>
+
+<table>
+  <tr>
+    <th>用户名</th>
+    <th>是否是作者</th>
+  </tr>
+
+<% @user.each do |user| %>
+  <tr>
+    <td><%=h user.login %></td>
+    <td><%=h user.isAdmin %></td>
+    <td><%= link_to '编辑', change_user_path(user) %></td>
+    <td><%= link_to '删除', user, :confirm => '确认删除?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

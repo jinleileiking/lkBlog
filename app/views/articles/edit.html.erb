@@ -1,0 +1,22 @@
+<div class='post'>
+    <div class='body'>
+        <h1>编辑文章</h1>
+
+        <% form_for(@article) do |f| %>
+            <%= f.error_messages %>
+
+            <p>
+                <%= f.label '标题' %><br />
+                <%= f.text_field :title %>
+            </p>
+            <p>
+                <%= f.label '内容' %><br />
+                <%= f.text_area :body,   :class => "mceEditor"%>
+            </p>
+            <%= image_tag @article.photo.url %>
+            <p>
+                <%= f.submit '编辑' %>
+            </p>
+        <% end %>
+    </div>
+</div>

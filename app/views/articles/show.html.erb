@@ -1,0 +1,12 @@
+<div class='post'>
+    <div class='body'>
+        <h1><%= link_to h(@article.title), @article %></h1>
+        <p><%=h @article.body %></p>
+        <div class="little"><%=h @article.user.login %> 写于 <%=h @article.date.strftime("%Y年%m月%d日 %H:%M:%S") %><br/>
+            <% if current_user and current_user.login == @article.user.login %>
+                <%= link_to '编辑', edit_article_path(@article) %> |
+                <%= link_to '删除', @article, :confirm => '确认删除?', :method => :delete %><br/>
+            <% end %>
+        </div>
+    </div>
+</div>

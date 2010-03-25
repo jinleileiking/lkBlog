@@ -1,0 +1,7 @@
+<h1>我的帐户</h1>
+<%= flash[:notice] %><br/>
+<% if current_user.login == 'admin' %>
+    <%= link_to '管理用户', users_path  %>
+<% end %>
+<%= link_to '修改密码', edit_user_path(current_user.login) %>
+<%= link_to '返回首页', articles_path %>
