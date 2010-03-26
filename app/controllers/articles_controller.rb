@@ -37,11 +37,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
-    if params[:article][:isShare] == "1"
-      params[:article][:isShare] = true
-    else
-      params[:article][:isShare] = false
-    end
+
     @article = Article.find(params[:id])
   end
 
@@ -73,6 +69,11 @@ class ArticlesController < ApplicationController
   # PUT /articles/1
   # PUT /articles/1.xml
   def update
+    if params[:article][:isShare] == "1"
+      params[:article][:isShare] = true
+    else
+      params[:article][:isShare] = false
+    end
     @article = Article.find(params[:id])
 
     respond_to do |format|

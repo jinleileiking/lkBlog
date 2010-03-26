@@ -2039,3 +2039,1920 @@ ActionController::RoutingError (No route matches "/photos/original/missing.png" 
   D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (31.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 10:15:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (93.8ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mArticle Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mUser Columns (46.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+ActionView::TemplateError (undefined method `isAdmin' for nil:NilClass) on line #2 of app/views/articles/index.html.erb:
+1: <% @articles.each do |article| %>
+2:     <% if article.isShare == true or  current_user.isAdmin == true %>
+3:     <h2 class="title"><%= link_to h(article.title), article %></h2>
+4:     <p class="meta"><%=h article.user.login %> 写于 <%=h article.date.strftime("%Y年%m月%d日 %H:%M:%S") %></p>
+5:     <div class="entry">
+
+    app/views/articles/index.html.erb:2
+    app/views/articles/index.html.erb:1:in `each'
+    app/views/articles/index.html.erb:1
+    app/controllers/articles_controller.rb:10:in `index'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 10:22:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+ActionView::TemplateError (undefined method `isAdmin' for nil:NilClass) on line #2 of app/views/articles/index.html.erb:
+1: <% @articles.each do |article| %>
+2:     <% if article.isShare == true or  current_user.isAdmin == true %>
+3:     <h2 class="title"><%= link_to h(article.title), article %></h2>
+4:     <p class="meta"><%=h article.user.login %> 写于 <%=h article.date.strftime("%Y年%m月%d日 %H:%M:%S") %></p>
+5:     <div class="entry">
+
+    app/views/articles/index.html.erb:2
+    app/views/articles/index.html.erb:1:in `each'
+    app/views/articles/index.html.erb:1
+    app/controllers/articles_controller.rb:10:in `index'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (140.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 10:28:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (31.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 13:44:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (171.9ms)[0m   [0;1mSELECT * FROM `articles` [0m
+
+ArgumentError (NULL pointer given):
+  (eval):3:in `each_hash'
+  (eval):3:in `all_hashes'
+  app/controllers/articles_controller.rb:8:in `index'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (187.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 13:46:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Columns (171.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Completed in 2078ms (View: 1797, DB: 250) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-03-26 13:46:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 94ms (View: 47, DB: 16) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-03-26 13:55:10) [POST]
+  Parameters: {"commit"=>"登\345\275\225", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"admin"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (46.9ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'admin') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 13:55:10', `last_login_at` = '2010-03-24 14:15:20', `current_login_at` = '2010-03-26 13:55:10', `login_count` = 3, `last_request_at` = '2010-03-26 13:55:10' WHERE `id` = 1[0m
+  [4;36;1mSQL (62.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 516ms (DB: 125) | 302 Found [http://localhost/user_session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 13:55:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 13:55:10', `last_request_at` = '2010-03-26 13:55:10' WHERE `id` = 1[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 109ms (View: 47, DB: 63) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-03-26 13:55:13) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 13:55:13', `last_request_at` = '2010-03-26 13:55:13' WHERE `id` = 1[0m
+  [4;36;1mSQL (93.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 156ms (DB: 109) | 302 Found [http://localhost/user_session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 13:55:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-26 13:55:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 109ms (View: 47, DB: 16) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-26 13:55:22) [POST]
+  Parameters: {"commit"=>"注\345\206\214", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"1234"}}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY '1234') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '6ed338a3f93e4a6f5a8daa073a0704394ca2a457a940096d97a1a1c4743cb910f7888d5071255970fa513db4aec4bb55108a3a84af8e204f1d2ec38b78c2c088') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 94ms (View: 16, DB: 16) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-03-26 13:55:30) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/user_session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-03-26 13:55:34) [POST]
+  Parameters: {"commit"=>"登\345\275\225", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"1234"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = '1234') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 13:55:34', `last_login_at` = '2010-03-24 14:15:35', `current_login_at` = '2010-03-26 13:55:34', `login_count` = 3, `last_request_at` = '2010-03-26 13:55:34' WHERE `id` = 2[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 109ms (DB: 47) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 13:55:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 13:55:34', `last_request_at` = '2010-03-26 13:55:34' WHERE `id` = 2[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mComment Load (15.6ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+Completed in 109ms (View: 47, DB: 47) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-26 13:55:35) [GET]
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png" with {:method=>:get}):
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 13:56:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 13:56:53', `last_request_at` = '2010-03-26 13:56:53' WHERE `id` = 2[0m
+  [4;36;1mSQL (93.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+Completed in 188ms (View: 47, DB: 94) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-26 13:56:53) [GET]
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png" with {:method=>:get}):
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 13:57:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 13:57:04', `last_request_at` = '2010-03-26 13:57:04' WHERE `id` = 2[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+Completed in 141ms (View: 63, DB: 47) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-26 13:57:04) [GET]
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png" with {:method=>:get}):
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-03-26 13:57:07) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"articles"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 13:57:07', `last_request_at` = '2010-03-26 13:57:07' WHERE `id` = 2[0m
+  [4;35;1mSQL (62.5ms)[0m   [0mCOMMIT[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/articles_controller.rb:40:in `edit'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-03-26 13:57:41) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 13:57:41', `last_request_at` = '2010-03-26 13:57:41' WHERE `id` = 2[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/articles_controller.rb:40:in `edit'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-03-26 13:57:42) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"articles"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 13:57:42', `last_request_at` = '2010-03-26 13:57:42' WHERE `id` = 2[0m
+  [4;35;1mSQL (125.0ms)[0m   [0mCOMMIT[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/articles_controller.rb:40:in `edit'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.3ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 13:57:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 13:57:43', `last_request_at` = '2010-03-26 13:57:43' WHERE `id` = 2[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+
+ActionView::TemplateError (undefined local variable or method `null' for #<ActionView::Base:0x4ab3cb0>) on line #7 of app/views/articles/index.html.erb:
+4:     <p class="meta"><%=h article.user.login %> 写于 <%=h article.date.strftime("%Y年%m月%d日 %H:%M:%S") %></p>
+5:     <div class="entry">
+6:       <p><%=  article.body%></p>
+7:       <% unless article.photo.url != null %>
+8:         <%= image_tag article.photo.url %>
+9:       <% end %>
+10: 
+
+    app/views/articles/index.html.erb:7
+    app/views/articles/index.html.erb:1:in `each'
+    app/views/articles/index.html.erb:1
+    app/controllers/articles_controller.rb:10:in `index'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-03-26 13:57:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 13:57:49', `last_request_at` = '2010-03-26 13:57:49' WHERE `id` = 2[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 94ms (DB: 31) | 302 Found [http://localhost/user_session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 13:57:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 13:57:49', `last_request_at` = '2010-03-26 13:57:49' WHERE `id` = 2[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+
+ActionView::TemplateError (undefined local variable or method `null' for #<ActionView::Base:0x4abaef8>) on line #7 of app/views/articles/index.html.erb:
+4:     <p class="meta"><%=h article.user.login %> 写于 <%=h article.date.strftime("%Y年%m月%d日 %H:%M:%S") %></p>
+5:     <div class="entry">
+6:       <p><%=  article.body%></p>
+7:       <% unless article.photo.url != null %>
+8:         <%= image_tag article.photo.url %>
+9:       <% end %>
+10: 
+
+    app/views/articles/index.html.erb:7
+    app/views/articles/index.html.erb:1:in `each'
+    app/views/articles/index.html.erb:1
+    app/controllers/articles_controller.rb:10:in `index'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 13:58:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 13:58:01', `last_request_at` = '2010-03-26 13:58:01' WHERE `id` = 2[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+Completed in 141ms (View: 78, DB: 47) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 13:58:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 13:58:31', `last_request_at` = '2010-03-26 13:58:31' WHERE `id` = 2[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mArticle Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+Completed in 203ms (View: 141, DB: 47) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-26 13:58:31) [GET]
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png" with {:method=>:get}):
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 14:00:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 14:00:39', `last_request_at` = '2010-03-26 14:00:39' WHERE `id` = 2[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+Completed in 109ms (View: 63, DB: 47) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-26 14:00:40) [GET]
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png" with {:method=>:get}):
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 14:01:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 14:01:56', `last_request_at` = '2010-03-26 14:01:56' WHERE `id` = 2[0m
+  [4;35;1mSQL (125.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+Completed in 219ms (View: 63, DB: 125) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-26 14:01:57) [GET]
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png" with {:method=>:get}):
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (140.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (93.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-03-26 15:13:08) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"articles"}
+  [4;35;1mUser Columns (750.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (156.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (93.8ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:13:12', `last_request_at` = '2010-03-26 15:13:12' WHERE `id` = 2[0m
+  [4;35;1mSQL (359.4ms)[0m   [0mCOMMIT[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/articles_controller.rb:40:in `edit'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (78.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-03-26 15:13:27) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:13:27', `last_request_at` = '2010-03-26 15:13:27' WHERE `id` = 2[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/articles_controller.rb:40:in `edit'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (1328.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-03-26 15:13:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"articles"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:13:32', `last_request_at` = '2010-03-26 15:13:32' WHERE `id` = 2[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/application
+Rendering articles/new
+Completed in 188ms (View: 47, DB: 31) | 200 OK [http://localhost/articles/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-03-26 15:15:36) [GET]
+  Parameters: {"action"=>"show", "id"=>"1234", "controller"=>"users"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:15:36', `last_request_at` = '2010-03-26 15:15:36' WHERE `id` = 2[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 125ms (View: 16, DB: 31) | 200 OK [http://localhost/users/1234]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-03-26 15:15:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"articles"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:15:39', `last_request_at` = '2010-03-26 15:15:39' WHERE `id` = 2[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/application
+Rendering articles/new
+Completed in 406ms (View: 125, DB: 94) | 200 OK [http://localhost/articles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-03-26 15:15:44) [POST]
+  Parameters: {"article"=>{"body"=>"<p>dasdfasdf</p>", "title"=>"adfasdf", "isShare"=>"0"}, "commit"=>"提\344\272\244", "action"=>"create", "controller"=>"articles"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:15:44', `last_request_at` = '2010-03-26 15:15:44' WHERE `id` = 2[0m
+  [4;36;1mSQL (93.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mArticle Create (62.5ms)[0m   [0mINSERT INTO `articles` (`created_at`, `photo_file_size`, `title`, `body`, `isShare`, `updated_at`, `photo_file_name`, `photo_content_type`, `date`, `user_id`, `photo_updated_at`) VALUES('2010-03-26 15:15:44', NULL, 'adfasdf', '<p>dasdfasdf</p>', 0, '2010-03-26 15:15:44', NULL, NULL, '2010-03-26 15:15:44', 2, NULL)[0m
+[paperclip] Saving attachments.
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 531ms (DB: 203) | 302 Found [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:15:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:15:45', `last_request_at` = '2010-03-26 15:15:45' WHERE `id` = 2[0m
+  [4;36;1mSQL (62.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 2) [0m
+Completed in 203ms (View: 94, DB: 78) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-03-26 15:15:49) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"articles"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:15:49', `last_request_at` = '2010-03-26 15:15:49' WHERE `id` = 2[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/articles_controller.rb:40:in `edit'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-03-26 15:17:28) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"articles"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:17:28', `last_request_at` = '2010-03-26 15:17:28' WHERE `id` = 2[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCOMMIT[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/articles_controller.rb:40:in `edit'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:17:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:17:41', `last_request_at` = '2010-03-26 15:17:41' WHERE `id` = 2[0m
+  [4;35;1mSQL (109.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 2) [0m
+Completed in 188ms (View: 63, DB: 109) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:17:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:17:44', `last_request_at` = '2010-03-26 15:17:44' WHERE `id` = 2[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 2) [0m
+Completed in 156ms (View: 78, DB: 47) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (140.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateComments (20100309031430)
+  [4;36;1mSQL (203.1ms)[0m   [0;1mDROP TABLE `comments`[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100309031430'[0m
+Migrating to CreateArticles (20100303031751)
+  [4;36;1mSQL (46.9ms)[0m   [0;1mDROP TABLE `articles`[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100303031751'[0m
+Migrating to CreateSessions (20081106072031)
+  [4;36;1mSQL (31.3ms)[0m   [0;1mDROP TABLE `sessions`[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20081106072031'[0m
+Migrating to CreateUsers (20081103171327)
+  [4;36;1mSQL (31.3ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20081103171327'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (250.0ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081103171327)
+  [4;36;1mSQL (93.8ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime, `login` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `login_count` int(11) DEFAULT 0 NOT NULL, `last_request_at` datetime, `last_login_at` datetime, `current_login_at` datetime, `last_login_ip` varchar(255), `current_login_ip` varchar(255), `isAdmin` tinyint(1) DEFAULT 0) ENGINE=InnoDB[0m
+  [4;35;1mSQL (187.5ms)[0m   [0mCREATE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;36;1mSQL (203.1ms)[0m   [0;1mCREATE INDEX `index_users_on_persistence_token` ON `users` (`persistence_token`)[0m
+  [4;35;1mSQL (187.5ms)[0m   [0mCREATE INDEX `index_users_on_last_request_at` ON `users` (`last_request_at`)[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081103171327')[0m
+Migrating to CreateSessions (20081106072031)
+  [4;35;1mSQL (78.1ms)[0m   [0mCREATE TABLE `sessions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `session_id` varchar(255) NOT NULL, `data` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (187.5ms)[0m   [0;1mCREATE INDEX `index_sessions_on_session_id` ON `sessions` (`session_id`)[0m
+  [4;35;1mSQL (187.5ms)[0m   [0mCREATE INDEX `index_sessions_on_updated_at` ON `sessions` (`updated_at`)[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081106072031')[0m
+Migrating to CreateArticles (20100303031751)
+  [4;35;1mSQL (93.8ms)[0m   [0mCREATE TABLE `articles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `body` text, `date` datetime, `isShare` tinyint(1) DEFAULT 0, `created_at` datetime, `updated_at` datetime, `user_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100303031751')[0m
+Migrating to CreateComments (20100309031430)
+  [4;35;1mSQL (109.4ms)[0m   [0mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `body` text, `updated_at` datetime, `user_id` int(11), `article_id` int(11), `created_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100309031430')[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `articles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sessions`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `sessions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `sessions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-03-26 15:20:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"1234", "controller"=>"users"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+Redirected to http://localhost:3000/articles
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 47ms (DB: 0) | 302 Found [http://localhost/users/1234]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:20:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-26 15:20:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 63ms (View: 0, DB: 0) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-26 15:20:20) [POST]
+  Parameters: {"commit"=>"注\345\206\214", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"admin"}}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '4f63c29aa25de2665e48f57dc2ed20bf18d45c94550616c5141817390f37702acbf264a109bd72912542f5f33916e6b2a29eacac0b946209f8d769f695c3d3e0') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO `users` (`created_at`, `last_request_at`, `crypted_password`, `updated_at`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `isAdmin`, `last_login_ip`, `login`, `last_login_at`) VALUES('2010-03-26 15:20:20', '2010-03-26 15:20:20', 'bae6408b252b703c5225dbe930d46dba8a9cee56b4d3b5513c370a69a5624329d6bddc331be14616a47317c24a537cfe4fe70243b371a541cc630fb5b14e86db', '2010-03-26 15:20:20', '127.0.0.1', 'J-QZ2PE1ZehASJWhaSIc', '2010-03-26 15:20:20', '4f63c29aa25de2665e48f57dc2ed20bf18d45c94550616c5141817390f37702acbf264a109bd72912542f5f33916e6b2a29eacac0b946209f8d769f695c3d3e0', 1, 0, NULL, 'admin', NULL)[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 188ms (DB: 63) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:20:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '4f63c29aa25de2665e48f57dc2ed20bf18d45c94550616c5141817390f37702acbf264a109bd72912542f5f33916e6b2a29eacac0b946209f8d769f695c3d3e0') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:20:20', `last_request_at` = '2010-03-26 15:20:20' WHERE `id` = 1[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mCOMMIT[0m
+Completed in 63ms (View: 47, DB: 16) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-03-26 15:20:23) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '4f63c29aa25de2665e48f57dc2ed20bf18d45c94550616c5141817390f37702acbf264a109bd72912542f5f33916e6b2a29eacac0b946209f8d769f695c3d3e0') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:20:23', `last_request_at` = '2010-03-26 15:20:23' WHERE `id` = 1[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 172ms (DB: 47) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:20:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-26 15:20:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-26 15:20:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-26 15:20:33) [POST]
+  Parameters: {"commit"=>"注\345\206\214", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"1234"}}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY '1234') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'db2b38950c3c7b9c5a9b609098a6749c784645667dcfef1706f8c1405dbc011bd74a2d32c72dc5e8a90f0fa40bce45d6e318616f8fe132bf7ac0cec57329b101') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO `users` (`created_at`, `last_request_at`, `crypted_password`, `updated_at`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `isAdmin`, `last_login_ip`, `login`, `last_login_at`) VALUES('2010-03-26 15:20:33', '2010-03-26 15:20:33', '56ab7a5f00a18c70f0366432878c204ce1b2255896417715a79921051f727de9811f0ed1c82254e1e88371fa88525e0221dfef0277ffc8ee2762bd7cb68feed8', '2010-03-26 15:20:33', '127.0.0.1', 'vkeyr1vAzFNIGiJwIakm', '2010-03-26 15:20:33', 'db2b38950c3c7b9c5a9b609098a6749c784645667dcfef1706f8c1405dbc011bd74a2d32c72dc5e8a90f0fa40bce45d6e318616f8fe132bf7ac0cec57329b101', 1, 0, NULL, '1234', NULL)[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 94ms (DB: 47) | 302 Found [http://localhost/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:20:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'db2b38950c3c7b9c5a9b609098a6749c784645667dcfef1706f8c1405dbc011bd74a2d32c72dc5e8a90f0fa40bce45d6e318616f8fe132bf7ac0cec57329b101') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:20:33', `last_request_at` = '2010-03-26 15:20:33' WHERE `id` = 2[0m
+  [4;35;1mSQL (62.5ms)[0m   [0mCOMMIT[0m
+Completed in 109ms (View: 31, DB: 63) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-03-26 15:20:35) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'db2b38950c3c7b9c5a9b609098a6749c784645667dcfef1706f8c1405dbc011bd74a2d32c72dc5e8a90f0fa40bce45d6e318616f8fe132bf7ac0cec57329b101') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:20:35', `last_request_at` = '2010-03-26 15:20:35' WHERE `id` = 2[0m
+  [4;36;1mSQL (62.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 125ms (DB: 94) | 302 Found [http://localhost/user_session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:20:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-03-26 15:20:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-03-26 15:20:42) [POST]
+  Parameters: {"commit"=>"登\345\275\225", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"admin"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'admin') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:20:42', `last_login_at` = '2010-03-26 15:20:20', `last_login_ip` = '127.0.0.1', `current_login_at` = '2010-03-26 15:20:42', `login_count` = 2, `last_request_at` = '2010-03-26 15:20:42' WHERE `id` = 1[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 125ms (DB: 47) | 302 Found [http://localhost/user_session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:20:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:20:43', `last_request_at` = '2010-03-26 15:20:43' WHERE `id` = 1[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCOMMIT[0m
+Completed in 125ms (View: 31, DB: 94) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-03-26 15:20:44) [GET]
+  Parameters: {"action"=>"show", "id"=>"admin", "controller"=>"users"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:20:44', `last_request_at` = '2010-03-26 15:20:44' WHERE `id` = 1[0m
+  [4;35;1mSQL (93.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 172ms (View: 0, DB: 94) | 200 OK [http://localhost/users/admin]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-26 15:20:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (login != 'admin') [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:20:46', `last_request_at` = '2010-03-26 15:20:46' WHERE `id` = 1[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCOMMIT[0m
+Completed in 109ms (View: 31, DB: 47) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-26 15:20:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (login != 'admin') [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:20:46', `last_request_at` = '2010-03-26 15:20:46' WHERE `id` = 1[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mCOMMIT[0m
+Completed in 78ms (View: 31, DB: 31) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#change (for 127.0.0.1 at 2010-03-26 15:20:47) [GET]
+  Parameters: {"action"=>"change", "id"=>"2", "controller"=>"users"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:20:47', `last_request_at` = '2010-03-26 15:20:47' WHERE `id` = 1[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering users/change
+Completed in 94ms (View: 16, DB: 31) | 200 OK [http://localhost/users/2/change]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#change (for 127.0.0.1 at 2010-03-26 15:20:48) [GET]
+  Parameters: {"action"=>"change", "id"=>"2", "controller"=>"users"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:20:48', `last_request_at` = '2010-03-26 15:20:48' WHERE `id` = 1[0m
+  [4;36;1mSQL (62.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering users/change
+Completed in 109ms (View: 16, DB: 63) | 200 OK [http://localhost/users/2/change]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#confirm (for 127.0.0.1 at 2010-03-26 15:20:49) [PUT]
+  Parameters: {"commit"=>"提\344\272\244", "action"=>"confirm", "_method"=>"put", "id"=>"2", "controller"=>"users", "user"=>{"isAdmin"=>"0"}}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:20:49', `last_request_at` = '2010-03-26 15:20:49' WHERE `id` = 1[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 234ms (DB: 47) | 302 Found [http://localhost/users/2/confirm]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:20:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:20:50', `last_request_at` = '2010-03-26 15:20:50' WHERE `id` = 1[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCOMMIT[0m
+Completed in 266ms (View: 141, DB: 47) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#confirm (for 127.0.0.1 at 2010-03-26 15:20:53) [PUT]
+  Parameters: {"commit"=>"提\344\272\244", "action"=>"confirm", "_method"=>"put", "id"=>"2", "controller"=>"users", "user"=>{"isAdmin"=>"1"}}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:20:53', `last_request_at` = '2010-03-26 15:20:53' WHERE `id` = 1[0m
+  [4;36;1mSQL (62.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:20:53', `isAdmin` = 1 WHERE `id` = 2[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 156ms (DB: 94) | 302 Found [http://localhost/users/2/confirm]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:20:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:20:53', `last_request_at` = '2010-03-26 15:20:53' WHERE `id` = 1[0m
+  [4;36;1mSQL (93.8ms)[0m   [0;1mCOMMIT[0m
+Completed in 141ms (View: 16, DB: 109) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-03-26 15:20:55) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:20:55', `last_request_at` = '2010-03-26 15:20:55' WHERE `id` = 1[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 109ms (DB: 63) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:20:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-03-26 15:20:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/user_session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-03-26 15:21:02) [POST]
+  Parameters: {"commit"=>"登\345\275\225", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"1234"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = '1234') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:21:02', `last_login_at` = '2010-03-26 15:20:33', `last_login_ip` = '127.0.0.1', `current_login_at` = '2010-03-26 15:21:02', `login_count` = 2, `last_request_at` = '2010-03-26 15:21:02' WHERE `id` = 2[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 94ms (DB: 47) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:21:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:21:02', `last_request_at` = '2010-03-26 15:21:02' WHERE `id` = 2[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mCOMMIT[0m
+Completed in 94ms (View: 47, DB: 31) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-03-26 15:21:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"articles"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:21:06', `last_request_at` = '2010-03-26 15:21:06' WHERE `id` = 2[0m
+  [4;36;1mSQL (62.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/application
+Rendering articles/new
+Completed in 156ms (View: 16, DB: 63) | 200 OK [http://localhost/articles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-03-26 15:21:12) [POST]
+  Parameters: {"article"=>{"body"=>"<p>asdfasfdasdfasfdasdfasdfasdfasdfa</p>", "title"=>"adasdfasdf", "isShare"=>"0"}, "commit"=>"提\344\272\244", "action"=>"create", "controller"=>"articles"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:21:12', `last_request_at` = '2010-03-26 15:21:12' WHERE `id` = 2[0m
+  [4;36;1mSQL (109.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`created_at`, `title`, `body`, `isShare`, `updated_at`, `date`, `user_id`) VALUES('2010-03-26 15:21:12', 'adasdfasdf', '<p>asdfasfdasdfasfdasdfasdfasdfasdfa</p>', 0, '2010-03-26 15:21:12', '2010-03-26 15:21:12', 2)[0m
+[paperclip] Saving attachments.
+  [4;36;1mSQL (31.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 203ms (DB: 141) | 302 Found [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:21:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:21:12', `last_request_at` = '2010-03-26 15:21:12' WHERE `id` = 2[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+Completed in 141ms (View: 109, DB: 31) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-03-26 15:21:33) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:21:33', `last_request_at` = '2010-03-26 15:21:33' WHERE `id` = 2[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 109ms (DB: 47) | 302 Found [http://localhost/user_session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:21:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mArticle Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 47ms (View: 0, DB: 31) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-26 15:21:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-26 15:21:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-26 15:21:41) [POST]
+  Parameters: {"commit"=>"注\345\206\214", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"1111"}}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY '1111') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '36ed06dd5124c54e3f1c00a79184178729139b205992ad1586b28c42cdb5252ae27dad45d96c8f51bacc1502f29418848cde9b0f9e391d65d7af72e59750db6f') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO `users` (`created_at`, `last_request_at`, `crypted_password`, `updated_at`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `isAdmin`, `last_login_ip`, `login`, `last_login_at`) VALUES('2010-03-26 15:21:41', '2010-03-26 15:21:41', '73217afd9b69bd6d0ddc7401c89a16ef4e9400b1b6c405cda205ac896f22cf3e90d80732cc3e2f427fcf4bad19a2a1c7c318b4158865aed8645e09ed4c5a8da0', '2010-03-26 15:21:41', '127.0.0.1', 'VqwTsNr7dK8UDe6uqy_y', '2010-03-26 15:21:41', '36ed06dd5124c54e3f1c00a79184178729139b205992ad1586b28c42cdb5252ae27dad45d96c8f51bacc1502f29418848cde9b0f9e391d65d7af72e59750db6f', 1, 0, NULL, '1111', NULL)[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 156ms (DB: 78) | 302 Found [http://localhost/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:21:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '36ed06dd5124c54e3f1c00a79184178729139b205992ad1586b28c42cdb5252ae27dad45d96c8f51bacc1502f29418848cde9b0f9e391d65d7af72e59750db6f') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:21:42', `last_request_at` = '2010-03-26 15:21:42' WHERE `id` = 3[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+Completed in 94ms (View: 63, DB: 31) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:21:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (15.6ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '36ed06dd5124c54e3f1c00a79184178729139b205992ad1586b28c42cdb5252ae27dad45d96c8f51bacc1502f29418848cde9b0f9e391d65d7af72e59750db6f') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:21:46', `last_request_at` = '2010-03-26 15:21:46' WHERE `id` = 3[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 125ms (View: 47, DB: 63) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-03-26 15:21:49) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '36ed06dd5124c54e3f1c00a79184178729139b205992ad1586b28c42cdb5252ae27dad45d96c8f51bacc1502f29418848cde9b0f9e391d65d7af72e59750db6f') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:21:49', `last_request_at` = '2010-03-26 15:21:49' WHERE `id` = 3[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 109ms (DB: 47) | 302 Found [http://localhost/user_session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:21:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-03-26 15:21:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/user_session/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-03-26 15:21:58) [POST]
+  Parameters: {"commit"=>"登\345\275\225", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"1234"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = '1234') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:21:58', `last_login_at` = '2010-03-26 15:21:02', `current_login_at` = '2010-03-26 15:21:58', `login_count` = 3, `last_request_at` = '2010-03-26 15:21:58' WHERE `id` = 2[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 94ms (DB: 47) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:21:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:21:59', `last_request_at` = '2010-03-26 15:21:59' WHERE `id` = 2[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+Completed in 141ms (View: 63, DB: 78) | 200 OK [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-03-26 15:22:03) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"articles"}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:22:03', `last_request_at` = '2010-03-26 15:22:03' WHERE `id` = 2[0m
+  [4;35;1mSQL (62.5ms)[0m   [0mCOMMIT[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/articles_controller.rb:40:in `edit'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Program/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-03-26 15:23:10) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:23:10', `last_request_at` = '2010-03-26 15:23:10' WHERE `id` = 2[0m
+  [4;36;1mSQL (93.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+Completed in 281ms (View: 109, DB: 94) | 200 OK [http://localhost/articles/1/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:35:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:35:36', `last_request_at` = '2010-03-26 15:35:36' WHERE `id` = 2[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+Completed in 141ms (View: 47, DB: 63) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-03-26 15:35:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"articles"}
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:35:39', `last_request_at` = '2010-03-26 15:35:39' WHERE `id` = 2[0m
+  [4;36;1mSQL (62.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (0.0ms)
+Completed in 156ms (View: 31, DB: 94) | 200 OK [http://localhost/articles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-03-26 15:35:42) [POST]
+  Parameters: {"article"=>{"body"=>"<p>asdfasdf</p>", "title"=>"asdfasdfasdf"}, "commit"=>"提\344\272\244", "action"=>"create", "controller"=>"articles"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:35:43', `last_request_at` = '2010-03-26 15:35:43' WHERE `id` = 2[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`created_at`, `title`, `body`, `isShare`, `updated_at`, `date`, `user_id`) VALUES('2010-03-26 15:35:43', 'asdfasdfasdf', '<p>asdfasdf</p>', 0, '2010-03-26 15:35:43', '2010-03-26 15:35:43', 2)[0m
+[paperclip] Saving attachments.
+  [4;36;1mSQL (31.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 375ms (DB: 78) | 302 Found [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:35:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:35:43', `last_request_at` = '2010-03-26 15:35:43' WHERE `id` = 2[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 2) [0m
+Completed in 109ms (View: 78, DB: 31) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-03-26 15:35:47) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"articles"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:35:47', `last_request_at` = '2010-03-26 15:35:47' WHERE `id` = 2[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+Rendered articles/_form (0.0ms)
+Completed in 125ms (View: 16, DB: 47) | 200 OK [http://localhost/articles/2/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-03-26 15:35:51) [PUT]
+  Parameters: {"article"=>{"body"=>"<p>asdfasdfasdfasdf</p>", "title"=>"asdfasdfasdf"}, "commit"=>"提\344\272\244", "action"=>"update", "_method"=>"put", "id"=>"2", "controller"=>"articles"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:35:51', `last_request_at` = '2010-03-26 15:35:51' WHERE `id` = 2[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mArticle Update (0.0ms)[0m   [0mUPDATE `articles` SET `updated_at` = '2010-03-26 15:35:51', `date` = '2010-03-26 15:35:51', `body` = '<p>asdfasdfasdfasdf</p>' WHERE `id` = 2[0m
+[paperclip] Saving attachments.
+  [4;36;1mSQL (31.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 203ms (DB: 78) | 302 Found [http://localhost/articles/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:35:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:35:51', `last_request_at` = '2010-03-26 15:35:51' WHERE `id` = 2[0m
+  [4;36;1mSQL (109.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 2) [0m
+Completed in 188ms (View: 78, DB: 109) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-03-26 15:36:58) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"articles"}
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:36:58', `last_request_at` = '2010-03-26 15:36:58' WHERE `id` = 2[0m
+  [4;36;1mSQL (62.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+Rendered articles/_form (15.6ms)
+Completed in 234ms (View: 16, DB: 78) | 200 OK [http://localhost/articles/2/edit]
+  [4;35;1mSQL (15.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-03-26 15:37:01) [PUT]
+  Parameters: {"article"=>{"body"=>"<p>asdfasdfasdfasdf</p>", "title"=>"asdfasdfasdf", "isShare"=>"1"}, "commit"=>"提\344\272\244", "action"=>"update", "_method"=>"put", "id"=>"2", "controller"=>"articles"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-03-26 15:37:01', `last_request_at` = '2010-03-26 15:37:01' WHERE `id` = 2[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mArticle Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` WHERE (`articles`.`id` = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mArticle Update (0.0ms)[0m   [0mUPDATE `articles` SET `updated_at` = '2010-03-26 15:37:01', `isShare` = 1, `date` = '2010-03-26 15:37:01' WHERE `id` = 2[0m
+[paperclip] Saving attachments.
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 141ms (DB: 125) | 302 Found [http://localhost/articles/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:37:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:37:01', `last_request_at` = '2010-03-26 15:37:01' WHERE `id` = 2[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 2) [0m
+Completed in 156ms (View: 63, DB: 78) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-03-26 15:37:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"articles"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:37:04', `last_request_at` = '2010-03-26 15:37:04' WHERE `id` = 2[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (0.0ms)
+Completed in 125ms (View: 16, DB: 47) | 200 OK [http://localhost/articles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-03-26 15:37:09) [POST]
+  Parameters: {"article"=>{"body"=>"<p>sadfsdf</p>", "title"=>"asdfasdf", "isShare"=>"0"}, "commit"=>"提\344\272\244", "action"=>"create", "controller"=>"articles"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:37:09', `last_request_at` = '2010-03-26 15:37:09' WHERE `id` = 2[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`created_at`, `title`, `body`, `isShare`, `updated_at`, `date`, `user_id`) VALUES('2010-03-26 15:37:09', 'asdfasdf', '<p>sadfsdf</p>', 0, '2010-03-26 15:37:09', '2010-03-26 15:37:09', 2)[0m
+[paperclip] Saving attachments.
+  [4;36;1mSQL (31.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 125ms (DB: 63) | 302 Found [http://localhost/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:37:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:37:09', `last_request_at` = '2010-03-26 15:37:09' WHERE `id` = 2[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mArticle Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 3) [0m
+Completed in 125ms (View: 63, DB: 47) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-03-26 15:37:15) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-26 15:37:15', `last_request_at` = '2010-03-26 15:37:15' WHERE `id` = 2[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/articles
+Completed in 125ms (DB: 47) | 302 Found [http://localhost/user_session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-03-26 15:37:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mArticle Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `articles`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 2) [0m
+Completed in 63ms (View: 16, DB: 31) | 200 OK [http://localhost/articles]
