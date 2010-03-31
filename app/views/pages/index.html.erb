@@ -1,0 +1,22 @@
+<h1>显示所有标题</h1>
+<br/>
+
+
+<table>
+  <tr>
+    <th>标题</th>
+  </tr>
+
+<% @pages.each do |page| %>
+  <tr>
+    <td><%=h page.body %></td>
+    <td><%= link_to '编辑', edit_page_path(page) %></td>
+    <td><%= link_to '删除', page, :confirm => '确认?', :method => :delete %></td>
+    <td><%= link_to '进入子标题管理', page_pagecontents_path(page) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '新建标题', new_page_path %>

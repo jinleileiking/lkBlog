@@ -17,4 +17,21 @@ module ApplicationHelper
 
     return false
   end
+
+  def is_photo_exist(article)
+    #    puts article.photo.url
+    if article.photo.url == "/photos/original/missing.png"
+      return false
+    end
+    return true
+  end
+
+  def get_comment_creator(comment)
+    if comment.user
+      return comment.user
+    else
+      return "匿名"
+    end
+    
+  end
 end

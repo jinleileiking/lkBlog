@@ -9,16 +9,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100309031430) do
+ActiveRecord::Schema.define(:version => 20100330062028) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
     t.text     "body"
     t.datetime "date"
-    t.boolean  "isShare",    :default => false
+    t.boolean  "isShare",            :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "comments", :force => true do |t|
@@ -27,6 +31,23 @@ ActiveRecord::Schema.define(:version => 20100309031430) do
     t.integer  "user_id"
     t.integer  "article_id"
     t.datetime "created_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
+  create_table "pagecontents", :force => true do |t|
+    t.string   "body"
+    t.integer  "page_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pages", :force => true do |t|
+    t.string   "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "sessions", :force => true do |t|

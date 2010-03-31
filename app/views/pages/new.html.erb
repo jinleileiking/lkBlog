@@ -1,0 +1,13 @@
+<h1>创建新标题</h1>
+
+<% form_for(@page) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label "标题" %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit '创建' %>
+  </p>
+<% end %>

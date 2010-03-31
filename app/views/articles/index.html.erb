@@ -3,6 +3,9 @@
     <h2 class="title"><%= link_to h(article.title), article %></h2>
     <p class="meta"><%=h article.user.login %> 写于 <%=h article.date.strftime("%Y年%m月%d日 %H:%M:%S") %></p>
     <div class="entry">
+      <% if is_photo_exist(article) %>
+        <%= image_tag article.photo.url %>
+      <% end %>
       <p><%=  article.body%></p>
 
       <p class="links">

@@ -1,0 +1,13 @@
+<h1>修改子标题</h1>
+
+<% form_for([@page, @pagecontent]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label "子标题" %><br />
+    <%= f.text_area :body , :class => "mceEditor" %>
+  </p>
+  <p>
+    <%= f.submit '修改' %>
+  </p>
+<% end %>

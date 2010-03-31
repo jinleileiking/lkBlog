@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_filter :find_article, :find_comments
-  before_filter :require_user, :only => [:show, :edit, :update, :destroy, :new, :create]
+  before_filter :require_user, :only => [:show, :edit, :update, :destroy]
   
   def find_article
     @article_id = params[:article_id]
@@ -35,7 +35,8 @@ class CommentsController < ApplicationController
         format.html { redirect_to(article_comments_url(@article)) }
         format.xml  { render :xml => @comments, :status => :created, :location => @comments }
       else
-        format.html { render :action => "new" }
+        flash[:notice] = '评论失败.请检查'
+        format.html { redirect_to(article_comments_url(@article)) }
         format.xml  { render :xml => @comments.errors, :status => :unprocessable_entity }
       end
     end

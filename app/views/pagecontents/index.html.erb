@@ -1,0 +1,22 @@
+<h1>
+  显示 <%=h  (@page.body) %>的子标题
+</h1>
+<br/>
+
+<table>
+  <tr>
+    <th>子标题</th>
+  </tr>
+
+<% @pagecontents.each do |pagecontent| %>
+  <tr>
+    <td><%= pagecontent.body %></td>
+    <td><%= link_to '编辑', edit_page_pagecontent_path(@page, pagecontent) %></td>
+    <td><%= link_to '删除', page_pagecontent_path(@page, pagecontent), :confirm => '确认?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '新子标题', new_page_pagecontent_path(@page) %>
