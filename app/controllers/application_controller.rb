@@ -7,6 +7,65 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password, :password_confirmation
   before_filter :find_all_pages
 
+  def getBookCollection()
+    url = 'http://api.douban.com/people/jinleileiking/collection?cat=book&status=read&max-results=100'
+    #    Net::HTTP.version_1_2
+    #    open(url)do|http|
+    #      atom = http.read
+
+    atom = Net::HTTP.get(URI(url))
+
+    @table = []
+    doc=REXML::Document.new(atom)
+    
+    tmp = 0
+    doc.elements.each("//entry/db:subject/title") do |e|
+      #      gbk = to_gbk(e.text)
+      #      p gbk
+      #      Iconv.iconv("UTF-8//IGNORE","GB2312//IGNORE",e.text)
+      @table[tmp] = {:title => e.text}
+      tmp = tmp +1
+    end
+
+    tmp = 0
+    doc.elements.each("//entry/db:subject/link") do |e|
+      if e.attributes["rel"] == "alternate"
+        @table[tmp] = @table[tmp].merge({:href => e.attributes["href"]})
+        tmp = tmp +1
+      end
+    end
+    return @table
+  end
+
+  def getMovieCollection()
+    url = 'http://api.douban.com/people/jinleileiking/collection?cat=movie&status=watched&max-results=100'
+    #    Net::HTTP.version_1_2
+    #    open(url)do|http|
+    #      atom = http.read
+
+    atom = Net::HTTP.get(URI(url))
+
+    @table = []
+    doc=REXML::Document.new(atom)
+
+    tmp = 0
+    doc.elements.each("//entry/db:subject/title") do |e|
+      #      gbk = to_gbk(e.text)
+      #      p gbk
+      #      Iconv.iconv("UTF-8//IGNORE","GB2312//IGNORE",e.text)
+      @table[tmp] = {:title => e.text}
+      tmp = tmp +1
+    end
+
+    tmp = 0
+    doc.elements.each("//entry/db:subject/link") do |e|
+      if e.attributes["rel"] == "alternate"
+        @table[tmp] = @table[tmp].merge({:href => e.attributes["href"]})
+        tmp = tmp +1
+      end
+    end
+    return @table
+  end
 
   def find_all_pages
     @page_all = Page.all

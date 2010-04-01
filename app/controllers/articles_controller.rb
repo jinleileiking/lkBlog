@@ -3,7 +3,8 @@ class ArticlesController < ApplicationController
   # GET /articles.xml
   #  before_filter :require_no_user, :only => [:new, :create]
   before_filter :require_user, :only => [:show, :edit, :update, :destroy, :new, :create]
-
+  before_filter :get_books, :get_movies
+  
   uses_tiny_mce( :options => {
       :theme => 'advanced',  # 皮肤
       :language => 'zh',  # 中文界面
@@ -22,7 +23,15 @@ class ArticlesController < ApplicationController
       # :force_br_newlines => true, # 此选项强制编辑器将段落符号(P)替换成换行符(BR)。不建议用：ff下不好使，用了此选项后，输入内容的居中、清单或编号都被破坏。
       :plugins => %w{contextmenu paste media emotions table fullscreen}},
     :only => [:new, :edit, :show, :index, :create, :update])  # tiny_mce考虑的非常贴心，这里是限定哪些action中起用
-  
+
+  def get_books
+    @books = getBookCollection()
+  end
+
+  def get_movies
+    @movies = getMovieCollection()
+  end
+
   def index
     @articles = Article.all
 
