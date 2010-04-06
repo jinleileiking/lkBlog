@@ -24,15 +24,10 @@ class ArticlesController < ApplicationController
       :plugins => %w{contextmenu paste media emotions table fullscreen}},
     :only => [:new, :edit, :show, :index, :create, :update])  # tiny_mce考虑的非常贴心，这里是限定哪些action中起用
 
-  def get_books
-    @books = getBookCollection()
-  end
 
-  def get_movies
-    @movies = getMovieCollection()
-  end
 
   def index
+    @side_bar = true
     @articles = Article.all
 
     respond_to do |format|

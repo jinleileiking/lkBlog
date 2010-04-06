@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(:version => 20100330062028) do
   end
 
   create_table "sessions", :force => true do |t|
-    t.string   "session_id", :null => false
+    t.string   "session_id", :default => "", :null => false
     t.text     "data"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -63,10 +63,10 @@ ActiveRecord::Schema.define(:version => 20100330062028) do
   create_table "users", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "login",                                :null => false
-    t.string   "crypted_password",                     :null => false
-    t.string   "password_salt",                        :null => false
-    t.string   "persistence_token",                    :null => false
+    t.string   "login",             :default => "",    :null => false
+    t.string   "crypted_password",  :default => "",    :null => false
+    t.string   "password_salt",     :default => "",    :null => false
+    t.string   "persistence_token", :default => "",    :null => false
     t.integer  "login_count",       :default => 0,     :null => false
     t.datetime "last_request_at"
     t.datetime "last_login_at"

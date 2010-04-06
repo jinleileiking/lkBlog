@@ -54,33 +54,35 @@ Released   : 20090918
           <div style="clear: both;">&nbsp;</div>
         </div>
         <!-- end #content -->
-        <div id="sidebar">
-          <% @page_all.each do |page| %>
-            <h2><%= h(page.body) %></h2>
+        <% if @side_bar %>
+          <div id="sidebar">
+            <% @page_all.each do |page| %>
+              <h2><%= h(page.body) %></h2>
+              <ul>
+                <% page.pagecontents.each do |content| %>
+                  <li><%= (content.body) %></li>
+                <% end %>
+              </ul>
+            <% end %>
+            <h2>读过的书</h2>
             <ul>
-              <% page.pagecontents.each do |content| %>
-                <li><%= (content.body) %></li>
+              <% @books.each do |book|  %>
+                <li>
+                  <%= link_to(book[:title], book[:href]) %>
+                </li>
               <% end %>
             </ul>
-          <% end %>
-          <h2>读过的书</h2>
-          <ul>
-            <% @books.each do |book|  %>
-              <li>
-                <%= link_to(book[:title], book[:href]) %>
-              </li>
-            <% end %>
-          </ul>
-          <h2>看过的电影</h2>
-          <ul>
-            <% @movies.each do |movie|  %>
-              <li>
-                <%= link_to(movie[:title], movie[:href]) %>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-        <!-- end #sidebar -->
+            <h2>看过的电影</h2>
+            <ul>
+              <% @movies.each do |movie|  %>
+                <li>
+                  <%= link_to(movie[:title], movie[:href]) %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+          <!-- end #sidebar -->
+        <% end %>
         <div style="clear: both;">&nbsp;</div>
       </div>
       <!-- end #page -->

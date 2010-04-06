@@ -7,6 +7,18 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password, :password_confirmation
   before_filter :find_all_pages
 
+  def to_gbk(str)
+    Iconv.iconv("GBK//IGNORE","UTF-8//IGNORE",str).to_s
+  end
+
+  def get_books
+    @books = getBookCollection()
+  end
+
+  def get_movies
+    @movies = getMovieCollection()
+  end
+  
   def getBookCollection()
     url = 'http://api.douban.com/people/jinleileiking/collection?cat=book&status=read&max-results=100'
     #    Net::HTTP.version_1_2
@@ -17,7 +29,8 @@ class ApplicationController < ActionController::Base
 
     @table = []
     doc=REXML::Document.new(atom)
-    
+
+
     tmp = 0
     doc.elements.each("//entry/db:subject/title") do |e|
       #      gbk = to_gbk(e.text)
@@ -44,10 +57,17 @@ class ApplicationController < ActionController::Base
     #      atom = http.read
 
     atom = Net::HTTP.get(URI(url))
-
+    puts Iconv.iconv("GBK//IGNORE","UTF-8//IGNORE",atom).to_s
     @table = []
     doc=REXML::Document.new(atom)
 
+    #             <db:attribute lang="zh_CN" name="aka">姐姐的守护者</db:attribute>
+    #    doc.elements.each("//entry/db:subject/db:attribute") do |e|
+    #      if e.attributes["lang"] == "zh_CN"
+    #        @table[tmp] = {:title => e.text}
+    #        tmp = tmp +1
+    #      end
+    #    end
     tmp = 0
     doc.elements.each("//entry/db:subject/title") do |e|
       #      gbk = to_gbk(e.text)
