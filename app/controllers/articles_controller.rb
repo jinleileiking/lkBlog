@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   # GET /articles.xml
   #  before_filter :require_no_user, :only => [:new, :create]
   before_filter :require_user, :only => [:show, :edit, :update, :destroy, :new, :create]
-  before_filter :get_books, :get_movies
+  before_filter :get_books, :get_movies, :only =>[:index]
   
   uses_tiny_mce( :options => {
       :theme => 'advanced',  # 皮肤
